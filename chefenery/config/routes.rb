@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  
+
+  get 'produtos/about'  
   get 'startup/index'
   root 'produtos#index'
 
