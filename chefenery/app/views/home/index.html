@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Modern Business - Start Bootstrap Template</title>
+    <title>Fábrica de Massas do Chef Nery</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -45,19 +45,33 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Chefe Nery</a>         
+                <a class="navbar-brand" href="home">Chef Nery</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                    <%= link_to 'Sobre', root_path %>
+                        <%= link_to 'Sobre', root_path %>
                     </li>
                     <li>
                         <%= link_to 'Serviços', root_path %>
                     </li>
                     <li>       
-                        <%= link_to 'Contato', root_path %> 
+                        <%= link_to 'Contato', root_path %>
+                        <%= link_to new_user_registration_path() do %>
+                          Cadastrar
+                        <% end %>
+                    </li>
+                    <li>
+                        <%= link_to new_user_session_path() do %>
+                          Login
+                        <% end %>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contato</a>
+                    </li>
+                      <li>
+                        <a href="about.html">Sobre</a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Culinária <b class="caret"></b></a>
@@ -155,39 +169,39 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-                    Bem-vindo à Fabrica de Massas Chef Nery
+                    Bem-Vindos a Fábrica de Massas do Chef Nery!
                 </h1>
             </div>
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-check"></i> Text 1 </h4>
+                        <h4><i class="fa fa-fw fa-check"></i>Massas Italianas</h4>
                     </div>
                     <div class="panel-body">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-default">Learn More</a>
+                        <a href="#" class="btn btn-default">Veja os Produtos Italianos</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-gift"></i> Texto 2 </h4>
+                        <h4><i class="fa fa-fw fa-gift"></i>Massas Árabes</h4>
                     </div>
                     <div class="panel-body">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-default">Learn More</a>
+                        <a href="#" class="btn btn-default">Veja os Produtos Árabes</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-compass"></i> Texto 3 </h4>
+                        <h4><i class="fa fa-fw fa-compass"></i>Massas Orientais</h4>
                     </div>
                     <div class="panel-body">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-default">Learn More</a>
+                        <a href="#" class="btn btn-default">Veja os Produtos Orientais</a>
                     </div>
                 </div>
             </div>
@@ -270,6 +284,7 @@
                         <li><a href="https://www.facebook.com/Chefnery-1071346359597779/?fref=ts"><i class="fa fa-facebook"></i></a>
                         </li>
                     </ul>
+                    <a class="btn btn-lg btn-default btn-block" href="#">Voltar ao topo</a>
                 </div>
             </div>
         </div>
