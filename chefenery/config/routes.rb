@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :ingredients
+  resources :products
   devise_for :users
 
   root "home#index"
