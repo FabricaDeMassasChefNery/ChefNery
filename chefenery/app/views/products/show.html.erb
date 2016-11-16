@@ -1,20 +1,28 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>Produto:</strong>
   <%= @product.title %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Descrição:</strong>
   <%= @product.description %>
 </p>
+
 <p>
-  <strong>Ingredients:</strong>
+  <strong>Categoria:</strong>
+  <%= @product.category.to_s %>
+</p>
+
+<p>
+  <strong>Ingredientes:</strong>
+  <ul>
   <%@product.ingredients.each do |i|%>
-      <%= i.title %>
-      <%= i.price %>
+      <li><%= i.title %></li>
+      <!-- <%= i.price %> -->
   <% end %>
+  </ul>
 </p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |

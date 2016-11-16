@@ -11,17 +11,29 @@
     </div>
   <% end %>
 
+  <!-- input for title -->
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
+
+  <!-- input for description -->
   <div class="field">
     <%= f.label :description %><br>
     <%= f.text_area :description %>
   </div>
+
+  <!-- dropdown list for category -->
   <div class="field">
-      <%= f.collection_check_boxes :ingredient_ids, Ingredient.all, :id, :title %>
+    <%= f.select :category, Product.categories.to_a.map {|w| [w.to_s.humanize, w]} %>
   </div>
+
+  <!-- checkboxes for ingredients -->
+  <div class="field">
+    <%= f.collection_check_boxes :ingredient_ids, Ingredient.all, :id, :title %>
+  </div>
+
+  <!-- submit -->
   <div class="actions">
     <%= f.submit %>
   </div>
