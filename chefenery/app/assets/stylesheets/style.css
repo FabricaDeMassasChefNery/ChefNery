@@ -1,0 +1,24 @@
+body{
+	margin: 0px;
+}
+
+#hero{
+	background-image: url("http://media.istockphoto.com/photos/heart-shaped-food-picture-id515855920?k=6&m=515855920&s=170667a&w=0&h=zRIk6daRs1l_EtVjo2OIbxHbhMeEPQ70WTI0Dwl9y7w=");
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+	top: 0;
+	bottom: 0; 
+	height: 100vh;
+	z-index: -10;
+}
+
+#hero-overlay{
+	position: absolute;
+	background-color: rgba(0,0,0,0.5);
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -5;
+}
