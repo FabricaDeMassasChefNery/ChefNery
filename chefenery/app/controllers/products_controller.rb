@@ -13,6 +13,7 @@ class ProductsController < ApplicationController
   # GET /products/new
   def new
     @product = Product.new
+    # ingredients_ids = @product.ingredients
   end
 
   # GET /products/1/edit
@@ -53,6 +54,6 @@ class ProductsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def product_params
-      params.require(:product).permit(:title, :description)
+      params.require(:product).permit(:title, :description, {ingredient_ids: []})
     end
 end

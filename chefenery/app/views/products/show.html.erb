@@ -9,6 +9,13 @@
   <strong>Description:</strong>
   <%= @product.description %>
 </p>
+<p>
+  <strong>Ingredients:</strong>
+  <%@product.ingredients.each do |i|%>
+      <%= i.title %>
+      <%= i.price %>
+  <% end %>
+</p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
