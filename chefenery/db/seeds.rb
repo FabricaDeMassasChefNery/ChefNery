@@ -9,7 +9,7 @@ ingredients = Ingredient.create([
   {title: 'Queijo', price: '23.0'}
   ])
 
-  products = Product.create([
+products = Product.create([
     {title: 'Lasanha', description: "Deliciosa lasanha com molhos vermelho e branco",
       category: "Culinária Italiana", price: 25,
       :ingredients => Ingredient.where(:title => ['Farinha', 'Molho', 'Ovos', 'Carne Moída', 'Presunto', 'Queijo'])},
