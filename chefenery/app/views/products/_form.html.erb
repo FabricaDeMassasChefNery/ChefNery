@@ -23,6 +23,13 @@
     <%= f.text_area :description %>
   </div>
 
+  <!-- input for price -->
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.number_field :price, value: number_to_currency(f.object.price.to_f, delimiter: '', unit: '', separator: ','), step: :any %>
+    <%#= f.number_field :price, step: :any %>
+  </div>
+
   <!-- dropdown list for category -->
   <div class="field">
     <%= f.select :category, Product.categories.to_a.map {|w| [w.to_s.humanize, w]} %>
