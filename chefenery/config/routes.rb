@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   resources :ingredients
   resources :products
-  devise_for :users
 
   root "home#index"
 
@@ -13,6 +12,6 @@ Rails.application.routes.draw do
   devise_for :users
 
   get "home" => "home#index"
-  get "cadastrar" => "devise/registrations#new"
+  get "cadastrar" => "users/sign_up"
   get "login" => "devise/sessions#new"
 end
