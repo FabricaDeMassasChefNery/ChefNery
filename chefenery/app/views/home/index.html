@@ -43,8 +43,8 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <%= link_to 'Sobre', home_about_path %>
-                    </li>   
-                    <li>       
+                    </li>
+                    <li>
                         <%= link_to 'Contato', home_contact_path %>
                         <!--
                         <%= link_to new_user_registration_path() do %>
@@ -76,18 +76,22 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Entrar <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Acesso <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <!-- <a href="full-width.html">Login</a> -->
-                                <%= link_to new_user_session_path() do %>
-                                Login
-                                <% end %>
-                            </li>
-                            <li>
-                               <!-- <a href="sidebar.html">Cadastrar</a> -->
-                               <%= link_to new_user_registration_path() do %>
-                                Cadastrar
+                                <% if user_signed_in? %>
+                                    <%= link_to destroy_user_session_path, method: :delete do %>
+                                    Logout
+                                    <% end %>
+                                <% else %>
+                                    <%= link_to new_user_session_path() do %>
+                                    Login
+                                    <% end %>
+                                </li>
+                                <li>
+                                   <%= link_to new_user_registration_path() do %>
+                                    Cadastrar
+                                   <% end %>
                                <% end %>
                             </li>
                         </ul>
@@ -239,7 +243,7 @@
 
         <!-- Features Section -->
 
-        
+
         <div class="row">
             <div class="col-lg-12">
                 <h2 class="page-header">Modern Business Features</h2>
