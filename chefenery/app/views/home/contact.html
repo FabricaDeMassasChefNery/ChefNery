@@ -14,6 +14,7 @@
     <!-- Bootstrap Core CSS -->
     
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <!-- Navigation -->
@@ -28,7 +29,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="home">Chef Nery</a>
+                    <a class="navbar-brand" href="../home">Chef Nery</a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -38,18 +39,7 @@
                         </li>   
                         <li>       
                             <%= link_to 'Contato', home_contact_path %>
-                            <!--
-                            <%= link_to new_user_registration_path() do %>
-                              Cadastrar
-                            <% end %> -->
-                        </li>
-                        <li>
-                            <!--
-                            <%= link_to new_user_session_path() do %>
-                              Login
-                            <% end %>
-                            -->
-                        </li>
+                        </li>                     
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Culinária <b class="caret"></b></a>
                             <ul class="dropdown-menu">
@@ -71,13 +61,11 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Entrar <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <!-- <a href="full-width.html">Login</a> -->
                                     <%= link_to new_user_session_path() do %>
                                     Login
                                     <% end %>
                                 </li>
                                 <li>
-                                   <!-- <a href="sidebar.html">Cadastrar</a> -->
                                    <%= link_to new_user_registration_path() do %>
                                     Cadastrar
                                    <% end %>
@@ -91,17 +79,25 @@
 
         </br>
         </br>
+        </br>
 
         <div class="box"> 
             <h1> Contato </h1>
-            <p> Existem várias maneiras de falar com a gente, são elas:
+            <p> Existem várias maneiras de falar com a gente, são elas: </p>
+            <h4><i class="fa fa-phone" aria-hidden="true"></i>(61)9 9999 - 9999</h4>
+            <h4><i class="fa fa-phone" aria-hidden="true"></i>(61)8 8888 - 888</h4>
+
             <div class ="social-icons"> 
-                <a href="https://www.facebook.com/Chefnery-1071346359597779/?fref=ts" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i>
-                <a href="https://google.com" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i>
-                <a href="https://google.com" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i>
-                <a href="https://google.X-UA-Compatible" target="_blank"><i class="fa fa-envelope-o" aria-hidden="true"></i>
-            </div>
+
+                <a href="https://www.facebook.com/Chefnery-1071346359597779/?fref=ts" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                <a href="https://google.com" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                <a href="https://google.com" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://google.com" target="_blank"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>          
+  
+            </div>    
         </div>
+
+
         
     </div>
       
